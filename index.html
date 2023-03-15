@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+            <form action="#" class="myform" name="myForm" onsubmit="check()" style="display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 5rem;">
+                <div class="text" style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;">
+                    <input type="text" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px;" name="username" placeholder="Enter your Name" />
+                </div><br/>
+                <div style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;">
+                    <input type="email" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px;" name="mail" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                </div><br/>
+                <div style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;">
+                    
+                    <input type="tel" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px;" name="phone" pattern="[789][0-9]{9}" placeholder="Enter Phnone Number" />
+                </div><br/>
+                <div style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;cursor: pointer;">
+                    <select name="gender" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px;cursor: pointer;">
+                        <option value="">please select your Gender...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    
+                </div><br/>
+                <div style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;">
+                    
+                    <input type="password" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px;" name="pass" placeholder="Enter password" />
+                </div><br/>
+                <div style="border:0.5px solid lightgray ;align-items:center ;margin-right:20px ;background-color: #07EE71; display:flex ;justify-content:space-between ;padding:3px 0px ;border-radius:5px;height:30px;width:30% ;cursor: pointer;">
+                    <input type="submit" style="border:none ;height:34px;padding:0px 10px ;width:100%;border-radius:5px; background-color: #07EE71;cursor: pointer;" value="Submit" />
+                    
+                </div>
+            </form>
+            <script type="">
+                function check(){
+                    let User = document.forms["myForm"]["username"].value;
+                    let Mail = document.forms["myForm"]["mail"].value;
+                    let passw = document.forms["myForm"]["pass"].value;
+                    let num = document.forms["myForm"]["phone"].value;
+                    let gen = document.forms["myForm"]["gender"].value;
+                    if (User == "" || Mail == "" || passw == "" || num == "" || gen == "") {
+                    alert("textbox cannot be empty!!!");
+                    return false;
+                    }else{
+                        alert("Form is successfully submited")
+                    }
+                    
+                }
+            </script>
+    
+    </body>
+</html>
